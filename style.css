@@ -50,7 +50,7 @@ ul li {
     flex: 2;
     padding: 10px;
     background-color: white;
-    padding-top: 40px;
+    padding-top: 10px;
     padding-right: 70px;
 }
 
@@ -79,6 +79,16 @@ li p {
     margin-top: 5px; /* Adjust the margin as needed */
     margin-bottom: 5px; /* Adjust the margin as needed */
 }
+
+.top-bar {
+    background-color: #127c30; /* Replace with your desired color */
+    height: 20px; /* Adjust the height as needed */
+    width: 100%; /* Makes the bar span the full width of the page */
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
 
 
 /* Add more CSS styling as needed */
