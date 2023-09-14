@@ -48,7 +48,7 @@ ul li {
 
 .right-column {
     flex: 2;
-    padding: 10px;
+    padding: 0px;
     background-color: white;
     padding-top: 10px;
     padding-right: 70px;
