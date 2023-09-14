@@ -1,7 +1,7 @@
 /* Add CSS styles here */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Garamond', serif;
+    background-color: white;
 }
 
 header {
@@ -40,7 +40,7 @@ ul li {
 .left-column {
     flex: 1;
     padding: 20px;
-    background-color: #f4f4f4;
+    background-color: white;
 }
 
 .right-column {
