@@ -40,13 +40,13 @@ ul li {
 
 .left-column {
     flex: 1;
-    padding: 10px;
+    padding: 20px;
     background-color: white;
 }
 
 .right-column {
     flex: 2;
-    padding: 10px;
+    padding: 20px;
     background-color: white;
     margin-top: 20px;
 }
