@@ -31,4 +31,23 @@ ul li {
     margin-bottom: 10px;
 }
 
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.left-column {
+    flex: 1;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.right-column {
+    flex: 2;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
 /* Add more CSS styling as needed */
