@@ -42,13 +42,13 @@ ul li {
 
 .left-column {
     flex: 0.8;
-    padding: 20px;
+    padding: 40px;
     background-color: white;
 }
 
 .right-column {
     flex: 2;
-    padding: 20px;
+    padding: 40px;
     background-color: white;
     margin-top: 20px;
 }
