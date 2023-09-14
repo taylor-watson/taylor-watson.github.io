@@ -17,8 +17,6 @@ header img {
 
 section {
     background-color: white;
-    padding: 20px;
-    margin: 20px;
 }
 
 ul {
@@ -46,7 +44,6 @@ ul li {
     flex: 2;
     padding: 20px;
     background-color: white;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 
