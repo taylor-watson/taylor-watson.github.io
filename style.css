@@ -43,15 +43,15 @@ ul li {
     flex: 0.8;
     padding: 40px;
     background-color: white;
-    margin-left: 100px;
+    padding-left: 100px;
 }
 
 .right-column {
     flex: 2;
     padding: 40px;
     background-color: white;
-    margin-top: 20px;
-    margin-right: 100px;
+    padding-top: 20px;
+    padding-right: 100px;
 }
 
 .personal-info {
