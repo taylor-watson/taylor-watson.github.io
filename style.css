@@ -13,12 +13,6 @@ a {
     text-decoration: none;
 }
 
-body img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-}
-
 section {
     background-color: white;
 }
@@ -46,7 +40,7 @@ ul li {
 
 .right-column {
     flex: 2;
-    padding: 20px;
+    padding: 10px;
     background-color: white;
     margin-top: 20px;
 }
@@ -56,11 +50,11 @@ ul li {
 }
 
 #working-papers {
-    margin-bottom: 40px; /* Adjust the margin as needed */
+    margin-bottom: 20px; /* Adjust the margin as needed */
 }
 
 #publications {
-    padding-top: 40px; /* Adjust the padding as needed */
+    padding-top: 20px; /* Adjust the padding as needed */
 }
 
 li h3 {
