@@ -41,17 +41,17 @@ ul li {
 
 .left-column {
     flex: 0.8;
-    padding: 40px;
+    padding: 10px;
     background-color: white;
-    padding-left: 100px;
+    padding-left: 80px;
 }
 
 .right-column {
     flex: 2;
-    padding: 40px;
+    padding: 10px;
     background-color: white;
     padding-top: 20px;
-    padding-right: 100px;
+    padding-right: 80px;
 }
 
 .personal-info {
