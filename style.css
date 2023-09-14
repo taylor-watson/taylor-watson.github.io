@@ -51,17 +51,16 @@ ul li {
     margin-top: 20px;
 }
 
-
 .personal-info {
     text-align: left; 
 }
 
 #working-papers {
-    margin-bottom: 20px; /* Adjust the margin as needed */
+    margin-bottom: 40px; /* Adjust the margin as needed */
 }
 
 #publications {
-    padding-top: 20px; /* Adjust the padding as needed */
+    padding-top: 40px; /* Adjust the padding as needed */
 }
 
 
