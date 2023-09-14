@@ -48,6 +48,12 @@ ul li {
     margin-right: 5px;
 }
 
+.left-column p {
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis (...) if text overflows */
+}
+
 .right-column {
     flex: 2;
     padding: 0px;
