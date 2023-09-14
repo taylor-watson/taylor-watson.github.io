@@ -50,4 +50,8 @@ ul li {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
+
+.personal-info {
+    text-align: left; /* To center the content in the left column */
+}
 /* Add more CSS styling as needed */
