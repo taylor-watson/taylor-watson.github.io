@@ -13,7 +13,6 @@ header {
 .personal-info img {
     width: 150px;
     height: 150px;
-    border-radius: 50%;
 }
 
 
@@ -44,6 +43,7 @@ ul li {
     flex: 0.8;
     padding: 40px;
     background-color: white;
+    margin-left: 100px;
 }
 
 .right-column {
@@ -51,7 +51,7 @@ ul li {
     padding: 40px;
     background-color: white;
     margin-top: 20px;
-    margin-right: 50px;
+    margin-right: 100px;
 }
 
 .personal-info {
