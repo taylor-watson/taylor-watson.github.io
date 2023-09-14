@@ -53,6 +53,18 @@ ul li {
 
 
 .personal-info {
-    text-align: left; /* To center the content in the left column */
+    text-align: left; 
 }
+
+#working-papers {
+    margin-bottom: 20px; /* Adjust the margin as needed */
+}
+
+#publications {
+    padding-top: 20px; /* Adjust the padding as needed */
+}
+
+
+
+
 /* Add more CSS styling as needed */
