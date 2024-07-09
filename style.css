@@ -90,6 +90,22 @@ li p {
     margin-bottom: 5px; /* Adjust the margin as needed */
 }
 
+.paper-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.paper-content {
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+.paper-image {
+    max-width: 150px;
+    height: auto;
+}
+
 .top-bar {
     background-color: #127c30; /* Replace with your desired color */
     height: 20px; /* Adjust the height as needed */
