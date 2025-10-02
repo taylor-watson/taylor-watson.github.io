@@ -16,9 +16,17 @@
         <div class="left-column">
             <div class="personal-info">
                 <h1>Taylor Watson</h1>
-                <img src="profile.jpg" alt="Taylor Watson - Economics">
+                <img src="profile.jpg" alt="Taylor Watson - Economics" class="profile-pic">
                 <p>I'm a fifth-year PhD student in Economics at <a href="https://www.bu.edu/econ/">Boston University</a>. <br>My research interests include labor, health, and history.<br>Please feel free to email me at <a href="mailto:watson@bu.edu">watson@bu.edu</a> </p>
                 <a href="cv.pdf">CV</a> 
+                <style>
+                .profile-pic {
+                  width: 200px;      /* set desired width */
+                  height: 300px;     /* set desired height */
+                  object-fit: cover; /* keeps aspect ratio, crops extra */
+                  border-radius: 50%; /* optional: makes it circular */
+                }
+                </style>
            </div>    
         </div>
 
