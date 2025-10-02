@@ -3,13 +3,14 @@
         margin: 0;
         font-family: 'EB Garamond', serif;
         display: flex;
+        flex-wrap: wrap; /* allows wrapping on small screens */
     }
 
     .left-column {
         position: fixed;
         top: 0;
         left: 0;
-        width: 560px; /* doubled from 280px */
+        width: 560px; /* full width on large screens */
         height: 100vh; 
         padding: 20px;
         box-sizing: border-box;
@@ -18,14 +19,15 @@
     }
 
     .right-column {
-        margin-left: 580px; /* leave space for the wider left column */
+        margin-left: 580px; /* leave space for the fixed left column */
         padding: 20px;
+        flex: 1 1 auto; /* allow it to shrink/grow */
         max-width: 800px;
     }
 
     .profile-pic {
         width: 100%;
-        max-width: 500px; /* doubled from 250px */
+        max-width: 500px; /* doubled size */
         height: auto;
         border-radius: 6px;
         display: block;
@@ -48,5 +50,33 @@
 
     a:hover {
         text-decoration: underline;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1200px) {
+        .left-column {
+            width: 400px;
+        }
+        .right-column {
+            margin-left: 420px;
+        }
+        .profile-pic {
+            max-width: 350px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        body {
+            flex-direction: column;
+        }
+        .left-column, .right-column {
+            position: relative;
+            width: 100%;
+            height: auto;
+            margin-left: 0;
+        }
+        .profile-pic {
+            max-width: 100%;
+        }
     }
 </style>
