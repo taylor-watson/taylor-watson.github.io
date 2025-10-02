@@ -1,160 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Taylor Watson - Economics</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
-    <link rel="icon" href="graph.ico" type="image/x-icon">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'EB Garamond', serif;
-            display: flex;
-        }
+<style>
+    body {
+        margin: 0;
+        font-family: 'EB Garamond', serif;
+        display: flex;
+    }
 
-        .left-column {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 280px; /* adjust width as you like */
-            height: 100vh; 
-            padding: 20px;
-            box-sizing: border-box;
-            background-color: #f9f9f9; /* optional: distinguish column */
-            overflow-y: auto;
-        }
+    .left-column {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 560px; /* doubled from 280px */
+        height: 100vh; 
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: #f9f9f9;
+        overflow-y: auto;
+    }
 
-        .right-column {
-            margin-left: 300px; /* leave space for fixed left column */
-            padding: 20px;
-            max-width: 800px;
-        }
+    .right-column {
+        margin-left: 580px; /* leave space for the wider left column */
+        padding: 20px;
+        max-width: 800px;
+    }
 
-        .profile-pic {
-            width: 100%;
-            max-width: 250px; /* controls size on big screens */
-            height: auto;
-            border-radius: 6px; /* optional: rounded corners */
-            display: block;
-            margin-bottom: 15px;
-        }
+    .profile-pic {
+        width: 100%;
+        max-width: 500px; /* doubled from 250px */
+        height: auto;
+        border-radius: 6px;
+        display: block;
+        margin-bottom: 15px;
+    }
 
-        h1, h2, h3 {
-            margin-top: 0.5em;
-            margin-bottom: 0.5em;
-        }
+    h1, h2, h3 {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
 
-        ul {
-            padding-left: 20px;
-        }
+    ul {
+        padding-left: 20px;
+    }
 
-        a {
-            color: #004080;
-            text-decoration: none;
-        }
+    a {
+        color: #004080;
+        text-decoration: none;
+    }
 
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-    <div class="left-column">
-        <div class="personal-info">
-            <h1>Taylor Watson</h1>
-            <img src="profile.jpg" alt="Taylor Watson - Economics" class="profile-pic">
-            <p>
-                I'm a fifth-year PhD student in Economics at 
-                <a href="https://www.bu.edu/econ/">Boston University</a>.<br>
-                My research interests include labor, health, and history.<br>
-                Please feel free to email me at 
-                <a href="mailto:watson@bu.edu">watson@bu.edu</a>
-            </p>
-            <p><a href="cv.pdf">CV</a></p>
-        </div>    
-    </div>
-
-    <div class="right-column">
-
-        <section id="working-papers">
-            <h2>Working Papers</h2>
-            <ul>
-                <li class="paper-item">
-                    <div class="paper-content">
-                        <h3><a href="wage_theft_credits.pdf">"From Your Pocket to Your Boss's: Tax Credits & Wage Theft"</a></h3>
-                        <p>Wage theft is a pervasive issue for American workers, yet research on the subject is
-                            stymied by underreporting: workers fear retaliatory firing if they report. This paper
-                            investigates if reporting decisions are affected by work-contingent government transfers,
-                            as they should make remaining employed more attractive, increasing the cost of
-                            being fired. Using variation in state Earned Income Tax Credits over time, I find that
-                            increases in transfers are associated with lower reporting counts, analyzing at the ZIP
-                            code level. To confirm that this decrease truly reflects changes in reporting rather than
-                            a decrease in wage theft itself, I estimate the relationship between transfers and several
-                            intensive-margin outcomes of wage theft. Finding no evidence that transfers decrease
-                            wage theft intensity, I conclude that transfers reduce reporting propensities.</p>
-                    </div>
-                </li>
-            </ul>
-        </section>
-        
-        <section id="worksprogress">
-            <h2>Works in Progress</h2>
-            <ul>                    
-                <li class="paper-item">
-                    <div class="paper-content">
-                        <h3>"How Does Utilization of Physician Administered Drugs Respond to Medicare Part B Payment Incentives?"</h3>
-                        <p><i>With Angelique Acquatella, Keith Ericson, and Amanda Starc</i></p>
-                    </div>
-                </li>
-                <li class="paper-item">
-                    <div class="paper-content">
-                        <h3>"Sectoral Push-Pull Instruments"</h3>
-                        <p><i>With Konrad Buchardi, Thomas Chaney, Lisa Tarquinio, & Tarek Hassan</i></p>
-                    </div>
-                </li>
-                <li class="paper-item">
-                    <div class="paper-content">
-                        <h3>"Safety & Management"</h3>
-                        <p><i>With Nick Bloom, Matt Johnson & David Levine</i></p>
-                    </div>
-                </li>
-                <li class="paper-item">
-                    <div class="paper-content">
-                        <h3>"Home on the Grange: Social Capital & Fertility"</h3>
-                    </div>
-                </li>                
-            </ul>
-        </section>
-
-        <section id="publications">
-            <h2>Publications</h2>
-            <ul>
-                <li>
-                    <h3>"Provider Payment Systems and Incentives"</h3>
-                    <p>In Stella R. Quay (ed.), International Encyclopedia of Public Health, Third Edition</p>
-                    <p><i>With Angelique Acquatella, Tianxu Chen, and Randall P. Ellis</i></p>
-                </li>
-            </ul>
-        </section>
-
-        <section id="code">
-            <h2>Extracurriculars</h2>
-            <ul>
-                <li>
-                    <h3><a href="https://github.com/taylor-watson/nlrb_elections">NLRB Elections Archive</a></h3>
-                    <p>Archive of NLRB elections files from 1977-2010, pulled via FOIA request and cleaned in Stata.</p>
-                </li>
-                <li>
-                    <h3>State Wage Theft Data Project</h3>
-                    <p>To address the lack of data on wage theft at the state level, I have been collecting state archives via FOIA requests. While there is significant heterogeneity across states in the amount and quality of data, I believe it will still be useful for future analyses. Please drop me a line if you're interested in learning more.</p>
-                </li>
-            </ul>
-        </section>
-
-    </div>
-</body>
-</html>
+    a:hover {
+        text-decoration: underline;
+    }
+</style>
