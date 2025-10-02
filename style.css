@@ -8,8 +8,8 @@ header {
     margin: 20px;
 }
 .personal-info img {
-    width: 300px;
-    height: 300px;
+    width: 300px;  /* Changed from 150px to 300px (doubled) */
+    height: 300px;  /* Changed from 150px to 300px (doubled) */
 }
 a {
     text-decoration: none;
@@ -30,7 +30,7 @@ ul li {
     align-items: flex-start;
 }
 .left-column {
-    flex: 1.6;  /* Changed from 0.8 to 1.6 (doubled) */
+    flex: 1.8;  /* Changed from 1.6 to 1.8 (slightly wider) */
     padding: 5px;
     background-color: white;
     padding-top: 10px;
@@ -43,7 +43,7 @@ ul li {
     text-overflow: ellipsis; /* Add ellipsis (...) if text overflows */
 }
 .right-column {
-    flex: 2;
+    flex: 4;  /* Changed from 2 to 4 (much wider, smaller gap) */
     padding: 0px;
     background-color: white;
     padding-top: 10px;
@@ -91,5 +91,14 @@ li p {
     position: fixed;
     top: 0;
     left: 0;
+}
+/* Add more CSS styling as needed */
+.right-column section {
+    border-top: 1px solid black;
+    padding-top: 20px;
+}
+
+.right-column section:first-child {
+    border-top: none;
 }
 /* Add more CSS styling as needed */
