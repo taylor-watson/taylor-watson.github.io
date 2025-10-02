@@ -14,11 +14,11 @@
             font-family: 'EB Garamond', serif;
             display: flex;
         }
-    
+            
         .left-column {
             position: fixed;
             top: 0;
-            left: 0;
+            left: 40px; /* Changed from 0 - adds left margin */
             width: 640px;
             height: 100vh; 
             padding: 20px;
@@ -28,13 +28,14 @@
         }
         
         .right-column {
-            margin-left: 660px; /* Changed from 680px to 660px (closer gap) */
+            margin-left: 700px; /* Changed from 660px to account for left margin */
             padding: 20px;
+            padding-right: 60px; /* Added right margin */
             max-width: 1200px;
         }
     
         .profile-pic {
-            width: 320px; /* Fixed width */
+            width: 300px; /* Fixed width */
             height: auto; /* Preserves aspect ratio */
             border-radius: 6px;
             display: block;
