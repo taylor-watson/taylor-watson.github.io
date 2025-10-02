@@ -30,7 +30,7 @@ ul li {
     align-items: flex-start;
 }
 .left-column {
-    flex: 1.8;  /* Changed from 1.6 to 1.8 (slightly wider) */
+    flex: 2;  /* Changed from 1.6 to 1.8 (slightly wider) */
     padding: 5px;
     background-color: white;
     padding-top: 10px;
@@ -48,8 +48,8 @@ ul li {
     background-color: white;
     padding-top: 10px;
     padding-right: 70px;
-    padding-left: 40px;
-    margin-left: 40px;
+    padding-left: 10px;
+    margin-left: 10px;
 }
 .personal-info {
     text-align: left; 
