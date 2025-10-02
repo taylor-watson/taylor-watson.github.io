@@ -4,96 +4,68 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Taylor Watson - Economics</title>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
-<link rel="icon" href="graph.ico" type="image/x-icon">
 <style>
-    body {
-        margin: 0;
-        font-family: 'EB Garamond', serif;
-    }
+body {
+    margin: 0;
+    font-family: 'EB Garamond', serif;
+}
 
-    .container {
-        display: flex;
-        flex-direction: row;
-        min-height: 100vh;
-    }
+/* Container for left and right columns */
+.container {
+    display: block; /* simple block layout */
+}
 
-    /* Left column */
-    .left-column {
-        width: 560px; /* double original width */
-        padding: 20px;
-        box-sizing: border-box;
-        background-color: #f9f9f9;
-        position: fixed; /* stays in place on large screens */
-        top: 0;
-        left: 0;
-        height: 100vh;
-        overflow-y: auto;
-    }
+/* Left column */
+.left-column {
+    float: left;
+    width: 560px; /* large column width */
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
 
-    /* Right column */
-    .right-column {
-        margin-left: 580px; /* leave room for fixed left column */
-        padding: 20px;
-        flex: 1;
-    }
+/* Right column */
+.right-column {
+    margin-left: 580px; /* leave space for left column */
+    padding: 20px;
+}
 
-    .profile-pic {
+/* Profile picture */
+.profile-pic {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .left-column { width: 400px; }
+    .right-column { margin-left: 420px; }
+    .profile-pic { max-width: 350px; }
+}
+
+@media (max-width: 768px) {
+    .left-column, .right-column {
+        float: none;
         width: 100%;
-        max-width: 500px; /* double original */
-        height: auto;
-        border-radius: 6px;
-        display: block;
-        margin-bottom: 15px;
+        margin: 0;
     }
-
-    h1, h2, h3 {
-        margin-top: 0.5em;
-        margin-bottom: 0.5em;
-    }
-
-    ul {
-        padding-left: 20px;
-    }
-
-    a {
-        color: #004080;
-        text-decoration: none;
-    }
-
-    a:hover {
-        text-decoration: underline;
-    }
-
-    /* Medium screens */
-    @media (max-width: 1200px) {
-        .left-column { width: 400px; }
-        .right-column { margin-left: 420px; }
-        .profile-pic { max-width: 350px; }
-    }
-
-    /* Small screens */
-    @media (max-width: 768px) {
-        .container { flex-direction: column; }
-        .left-column, .right-column {
-            position: relative;
-            width: 100%;
-            height: auto;
-            margin-left: 0;
-        }
-        .profile-pic { max-width: 100%; }
-    }
+    .profile-pic { max-width: 100%; }
+}
 </style>
 </head>
 <body>
+
 <div class="container">
     <div class="left-column">
         <h1>Taylor Watson</h1>
-        <img src="profile.jpg" alt="Taylor Watson - Economics" class="profile-pic">
+        <img src="profile.jpg" class="profile-pic" alt="Taylor Watson">
         <p>
             I'm a fifth-year PhD student in Economics at 
             <a href="https://www.bu.edu/econ/">Boston University</a>.<br>
-            My research interests include labor, health, and history.<br>
+            Research interests: labor, health, and history.<br>
             Email: <a href="mailto:watson@bu.edu">watson@bu.edu</a>
         </p>
         <p><a href="cv.pdf">CV</a></p>
@@ -102,29 +74,24 @@
     <div class="right-column">
         <h2>Working Papers</h2>
         <ul>
-            <li>
-                <h3><a href="wage_theft_credits.pdf">"From Your Pocket to Your Boss's: Tax Credits & Wage Theft"</a></h3>
-                <p>Wage theft is a pervasive issue for American workers...</p>
-            </li>
+            <li>"From Your Pocket to Your Boss's: Tax Credits & Wage Theft"</li>
         </ul>
-
         <h2>Works in Progress</h2>
         <ul>
             <li>"How Does Utilization of Physician Administered Drugs Respond to Medicare Part B Payment Incentives?"</li>
             <li>"Sectoral Push-Pull Instruments"</li>
         </ul>
-
         <h2>Publications</h2>
         <ul>
             <li>"Provider Payment Systems and Incentives"</li>
         </ul>
-
         <h2>Extracurriculars</h2>
         <ul>
-            <li><a href="https://github.com/taylor-watson/nlrb_elections">NLRB Elections Archive</a></li>
+            <li>NLRB Elections Archive</li>
             <li>State Wage Theft Data Project</li>
         </ul>
     </div>
 </div>
+
 </body>
 </html>
