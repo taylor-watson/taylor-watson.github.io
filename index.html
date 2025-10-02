@@ -2,32 +2,35 @@
     body {
         margin: 0;
         font-family: 'EB Garamond', serif;
+    }
+
+    /* Container for two-column layout */
+    .container {
         display: flex;
-        flex-wrap: wrap; /* allows wrapping on small screens */
+        flex-direction: row;
+        min-height: 100vh;
     }
 
     .left-column {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 560px; /* full width on large screens */
-        height: 100vh; 
+        flex: 0 0 560px; /* fixed width on large screens */
         padding: 20px;
         box-sizing: border-box;
         background-color: #f9f9f9;
         overflow-y: auto;
+        position: sticky; /* stays visible when scrolling */
+        top: 0;
+        height: 100vh;
     }
 
     .right-column {
-        margin-left: 580px; /* leave space for the fixed left column */
+        flex: 1;
         padding: 20px;
-        flex: 1 1 auto; /* allow it to shrink/grow */
-        max-width: 800px;
+        min-width: 0; /* prevents overflow */
     }
 
     .profile-pic {
         width: 100%;
-        max-width: 500px; /* doubled size */
+        max-width: 500px;
         height: auto;
         border-radius: 6px;
         display: block;
@@ -55,10 +58,7 @@
     /* Responsive adjustments */
     @media (max-width: 1200px) {
         .left-column {
-            width: 400px;
-        }
-        .right-column {
-            margin-left: 420px;
+            flex: 0 0 400px;
         }
         .profile-pic {
             max-width: 350px;
@@ -66,13 +66,15 @@
     }
 
     @media (max-width: 768px) {
-        body {
+        .container {
             flex-direction: column;
         }
-        .left-column, .right-column {
-            position: relative;
+        .left-column {
             width: 100%;
             height: auto;
+            position: relative;
+        }
+        .right-column {
             margin-left: 0;
         }
         .profile-pic {
