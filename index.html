@@ -38,6 +38,39 @@
             display: block;
             margin-bottom: 15px;
         }
+
+        .nav-buttons {
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+        }
+
+        .nav-btn {
+            background: none;
+            border: none;
+            font-family: 'EB Garamond', serif;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 0;
+            margin-right: 30px;
+            color: rgba(0, 0, 0, 0.4);
+            transition: color 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            color: rgba(0, 0, 0, 0.7);
+        }
+
+        .nav-btn.active {
+            color: rgba(0, 0, 0, 1);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
     
         .right-column section {
             border-top: 1px solid black;
@@ -140,6 +173,11 @@
                 width: 100%;
                 max-width: 300px;
             }
+
+            .nav-btn {
+                font-size: 20px;
+                margin-right: 20px;
+            }
         }
     </style>
 </head>
@@ -160,144 +198,183 @@
     </div>
 
     <div class="right-column">
+        <div class="nav-buttons">
+            <button class="nav-btn active" onclick="showTab('research')">Research</button>
+            <button class="nav-btn" onclick="showTab('teaching')">Teaching</button>
+        </div>
 
-        <section id="working-papers">
-            <h2>Working Papers</h2>
-            <ul>
-                <li class="paper-item">
-                    <div class="paper-content">
-                        <h3><a href="wage_theft_credits.pdf">"From Your Pocket to Your Boss's: Tax Credits & Wage Theft"</a></h3>
-                        <button class="abstract-btn" onclick="toggleAbstract('abstract1')">Abstract</button>
-                        <div id="abstract1" class="abstract-content">
-                            <p>Wage theft is a pervasive issue for American workers, yet research on the subject is
-                                stymied by underreporting: workers fear retaliatory firing if they report. This paper
-                                investigates if reporting decisions are affected by work-contingent government transfers,
-                                as they should make remaining employed more attractive, increasing the cost of
-                                being fired. Using variation in state Earned Income Tax Credits over time, I find that
-                                increases in transfers are associated with lower reporting counts, analyzing at the ZIP
-                                code level. To confirm that this decrease truly reflects changes in reporting rather than
-                                a decrease in wage theft itself, I estimate the relationship between transfers and several
-                                intensive-margin outcomes of wage theft. Finding no evidence that transfers decrease
-                                wage theft intensity, I conclude that transfers reduce reporting propensities.</p>
+        <div id="research-tab" class="tab-content active">
+            <section id="working-papers">
+                <h2>Working Papers</h2>
+                <ul>
+                    <li class="paper-item">
+                        <div class="paper-content">
+                            <h3><a href="wage_theft_credits.pdf">"From Your Pocket to Your Boss's: Tax Credits & Wage Theft"</a></h3>
+                            <button class="abstract-btn" onclick="toggleAbstract('abstract1')">Abstract</button>
+                            <div id="abstract1" class="abstract-content">
+                                <p>Wage theft is a pervasive issue for American workers, yet research on the subject is
+                                    stymied by underreporting: workers fear retaliatory firing if they report. This paper
+                                    investigates if reporting decisions are affected by work-contingent government transfers,
+                                    as they should make remaining employed more attractive, increasing the cost of
+                                    being fired. Using variation in state Earned Income Tax Credits over time, I find that
+                                    increases in transfers are associated with lower reporting counts, analyzing at the ZIP
+                                    code level. To confirm that this decrease truly reflects changes in reporting rather than
+                                    a decrease in wage theft itself, I estimate the relationship between transfers and several
+                                    intensive-margin outcomes of wage theft. Finding no evidence that transfers decrease
+                                    wage theft intensity, I conclude that transfers reduce reporting propensities.</p>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="paper-item">
-                    <div class="paper-content">
-                        <h3>"Heterogeneous Firm Effects of OSHA Enforcement"</h3>
-                        <button class="abstract-btn" onclick="toggleAbstract('abstract2')">Abstract</button>
-                        <div id="abstract2" class="abstract-content">
-                            <p>When a government intervenes in a workplace to enforce regulations, there are generally two outcomes: 
-                                a primary outcome (firm ends the misbehavior) and secondary outcomes (the firm adapts its production 
-                                to the new status quo). While the former is well documented, the latter is less understood, particularly 
-                                at the micro level. This paper estimates these secondary effects using Census micro data on plants investigated 
-                                by the US Occupational Safety & Health Administration (OSHA). Each year, OSHA conducts nearly 40,000 surprise 
-                                inspections, enforcing safe conditions and ensuring compliance as the plant implements the required safeguards. 
-                                In the plant responses to these enforcement actions, I find important heterogeneity of effect depending on the 
-                                severity of the enforcement: while minor enforcement actions cause increases in employment and probability of plant 
-                                survival, major enforcements have the opposite effect. I explain this heterogeneity using a model of plant decisions 
-                                on safety. Plants are heterogeneous in their productivity, leading to heterogeneous safety allocations. When OSHA 
-                                inspections enforce full compliance, this acts as a negative shock to labor productivity. Facing competitive output and 
-                                labor markets, high productivity firms are able to adapt and thrive, while low productivity firms struggle and close. </p>
+                    </li>
+                    <li class="paper-item">
+                        <div class="paper-content">
+                            <h3>"Heterogeneous Firm Effects of OSHA Enforcement"</h3>
+                            <button class="abstract-btn" onclick="toggleAbstract('abstract2')">Abstract</button>
+                            <div id="abstract2" class="abstract-content">
+                                <p>When a government intervenes in a workplace to enforce regulations, there are generally two outcomes: 
+                                    a primary outcome (firm ends the misbehavior) and secondary outcomes (the firm adapts its production 
+                                    to the new status quo). While the former is well documented, the latter is less understood, particularly 
+                                    at the micro level. This paper estimates these secondary effects using Census micro data on plants investigated 
+                                    by the US Occupational Safety & Health Administration (OSHA). Each year, OSHA conducts nearly 40,000 surprise 
+                                    inspections, enforcing safe conditions and ensuring compliance as the plant implements the required safeguards. 
+                                    In the plant responses to these enforcement actions, I find important heterogeneity of effect depending on the 
+                                    severity of the enforcement: while minor enforcement actions cause increases in employment and probability of plant 
+                                    survival, major enforcements have the opposite effect. I explain this heterogeneity using a model of plant decisions 
+                                    on safety. Plants are heterogeneous in their productivity, leading to heterogeneous safety allocations. When OSHA 
+                                    inspections enforce full compliance, this acts as a negative shock to labor productivity. Facing competitive output and 
+                                    labor markets, high productivity firms are able to adapt and thrive, while low productivity firms struggle and close. </p>
+                            </div>
                         </div>
-                    </div>
-                </li>            </ul>
-        </section>
-        
-        <section id="worksprogress">
-            <h2>Works in Progress</h2>
-            <ul>                    
-                <li class="paper-item">
-                    <div class="paper-content">
-                        <h3>"Push-Pull Instruments for Local Sectoral Employment Stocks"</h3>
-                        <p><i>With Konrad Buchardi, Thomas Chaney, Lisa Tarquinio and Tarek Hassan</i></p>
-                    </div>
-                </li>
-                <li class="paper-item">
-                    <div class="paper-content">
-                        <h3>"Safety & Management"</h3>
-                        <p><i>With Nick Bloom, Matt Johnson and David Levine</i></p>
-                    </div>
-                </li>
-                  <li class="paper-item">
-                    <div class="paper-content">
-                        <h3>"How Does Utilization of Physician Administered Drugs Respond to Medicare Part B Payment Incentives?"</h3>
-                        <p><i>With Angelique Acquatella, Keith Ericson and Amanda Starc</i></p>
-                    </div>
-                </li>
-                <li class="paper-item">
-                    <div class="paper-content">
-                        <h3>"Home on the Grange: Social Capital & Fertility"</h3>
-                        <button class="abstract-btn" onclick="toggleAbstract('abstract6')">Abstract</button>
-                        <div id="abstract6" class="abstract-content">
-                            <p>The exacerbating fertility crisis has renewed interest in the drivers of fertility choice. 
-                                I estimate the importance of an under-researched factor, social capital, using a distinct historical experiment: 
-                                the spread of the Grange Movement in the late 19th Century. This group was dedicated to fostering strong communities
-                                through education and social inclusion. I digitize archives of chapter formation and dissolution, and link them
-                                to the full-count Censuses to produce a novel panel dataset of individuals and their hometown Grange status. I then exploit
-                                the quasi-random nature of chapter formation, wherein organizers travelled between towns in plausibly-exogenous routes, to 
-                                construct an instrument for Grange presence. I first show that Granges had a positive causal impact on social capital, using 
-                                the formation of high schools as a proxy. I then estimate the effects of Grange exposure on fertility, finding strong positive effects.
-                                Policymakers interested in raising fertility rates should consider policies which will increase social capital as an effective mechanism.</p>
+                    </li>
+                </ul>
+            </section>
+            
+            <section id="worksprogress">
+                <h2>Works in Progress</h2>
+                <ul>                    
+                    <li class="paper-item">
+                        <div class="paper-content">
+                            <h3>"Push-Pull Instruments for Local Sectoral Employment Stocks"</h3>
+                            <p><i>With Konrad Buchardi, Thomas Chaney, Lisa Tarquinio and Tarek Hassan</i></p>
                         </div>
-                    </div>
-                </li>                
-            </ul>
-        </section>
+                    </li>
+                    <li class="paper-item">
+                        <div class="paper-content">
+                            <h3>"Safety & Management"</h3>
+                            <p><i>With Nick Bloom, Matt Johnson and David Levine</i></p>
+                        </div>
+                    </li>
+                    <li class="paper-item">
+                        <div class="paper-content">
+                            <h3>"How Does Utilization of Physician Administered Drugs Respond to Medicare Part B Payment Incentives?"</h3>
+                            <p><i>With Angelique Acquatella, Keith Ericson and Amanda Starc</i></p>
+                        </div>
+                    </li>
+                    <li class="paper-item">
+                        <div class="paper-content">
+                            <h3>"Home on the Grange: Social Capital & Fertility"</h3>
+                            <button class="abstract-btn" onclick="toggleAbstract('abstract6')">Abstract</button>
+                            <div id="abstract6" class="abstract-content">
+                                <p>The exacerbating fertility crisis has renewed interest in the drivers of fertility choice. 
+                                    I estimate the importance of an under-researched factor, social capital, using a distinct historical experiment: 
+                                    the spread of the Grange Movement in the late 19th Century. This group was dedicated to fostering strong communities
+                                    through education and social inclusion. I digitize archives of chapter formation and dissolution, and link them
+                                    to the full-count Censuses to produce a novel panel dataset of individuals and their hometown Grange status. I then exploit
+                                    the quasi-random nature of chapter formation, wherein organizers travelled between towns in plausibly-exogenous routes, to 
+                                    construct an instrument for Grange presence. I first show that Granges had a positive causal impact on social capital, using 
+                                    the formation of high schools as a proxy. I then estimate the effects of Grange exposure on fertility, finding strong positive effects.
+                                    Policymakers interested in raising fertility rates should consider policies which will increase social capital as an effective mechanism.</p>
+                            </div>
+                        </div>
+                    </li>                
+                </ul>
+            </section>
 
-        <section id="publications">
-            <h2>Publications</h2>
-            <ul>
-                <li>
-                    <h3>"Provider Payment Systems and Incentives"</h3>
-                    <p>In Stella R. Quay (ed.), International Encyclopedia of Public Health, Third Edition</p>
-                    <p><i>With Angelique Acquatella, Tianxu Chen, and Randall P. Ellis</i></p>
-                </li>
-            </ul>
-        </section>
+            <section id="publications">
+                <h2>Publications</h2>
+                <ul>
+                    <li>
+                        <h3>"Provider Payment Systems and Incentives"</h3>
+                        <p>In Stella R. Quay (ed.), International Encyclopedia of Public Health, Third Edition</p>
+                        <p><i>With Angelique Acquatella, Tianxu Chen, and Randall P. Ellis</i></p>
+                    </li>
+                </ul>
+            </section>
 
-        <section id="teaching">
-            <h2>Teaching</h2>
-            <ul>
-                <li>
-                    <h3>Harvard University, EC970: Open Questions in Economics</h3>
-                    <p>Instructor-of-Record, Spring 2025</p>
-                </li>
-                <li>
-                    <h3>Boston University, EC204: Empirical Economics II</h3>
-                    <p>Teaching Fellow to Professor Onur Burak Celik, Spring 2023</p>
-                </li>
-                <li>
-                    <h3>Boston University, EC365: Economic Institutions in Historical Perspective</h3>
-                    <p>Teaching Fellow to Professor James Feigenbaum, Fall 2022</p>
-                </li>
-            </ul>
-        </section>
-        
-        <section id="code">
-            <h2>Extracurriculars</h2>
-            <ul>
-                <li>
-                    <h3><a href="https://github.com/taylor-watson/nlrb_elections">NLRB Elections Archive</a></h3>
-                    <p>Archive of NLRB elections files from 1977-2010, pulled via FOIA request and cleaned in Stata.</p>
-                </li>
-                <li>
-                    <h3>State Wage Theft Data Project</h3>
-                    <p>To address the lack of data on wage theft at the state level, I have been collecting state archives via FOIA requests. While there is significant heterogeneity across states in the amount and quality of data, I believe it will still be useful for future analyses. Please drop me a line if you're interested in learning more.</p>
-                </li>
-                <li>
-                    <h3>Grange Data Project</h3>
-                    <p>To study the importance of the Granger Movement, I have gathered records of chapter formation from state members of the modern Grange organization. Please reach out if they might be of use.</p>
-                </li>
-            </ul>
-        </section>
+            <section id="code">
+                <h2>Extracurriculars</h2>
+                <ul>
+                    <li>
+                        <h3><a href="https://github.com/taylor-watson/nlrb_elections">NLRB Elections Archive</a></h3>
+                        <p>Archive of NLRB elections files from 1977-2010, pulled via FOIA request and cleaned in Stata.</p>
+                    </li>
+                    <li>
+                        <h3>State Wage Theft Data Project</h3>
+                        <p>To address the lack of data on wage theft at the state level, I have been collecting state archives via FOIA requests. While there is significant heterogeneity across states in the amount and quality of data, I believe it will still be useful for future analyses. Please drop me a line if you're interested in learning more.</p>
+                    </li>
+                    <li>
+                        <h3>Grange Data Project</h3>
+                        <p>To study the importance of the Granger Movement, I have gathered records of chapter formation from state members of the modern Grange organization. Please reach out if they might be of use.</p>
+                    </li>
+                </ul>
+            </section>
+        </div>
 
+        <div id="teaching-tab" class="tab-content">
+            <section id="teaching">
+                <h2>Teaching</h2>
+                <ul>
+                    <li>
+                        <h3>Harvard University, EC970: Open Questions in Economics</h3>
+                        <p>Instructor-of-Record, Spring 2025</p>
+                        <p><a href="#">Syllabus</a></p>
+                    </li>
+                    <li>
+                        <h3>Boston University, EC204: Empirical Economics II</h3>
+                        <p>Teaching Fellow to Professor Onur Burak Celik, Spring 2023</p>
+                        <p><a href="#">Syllabus</a></p>
+                    </li>
+                    <li>
+                        <h3>Boston University, EC365: Economic Institutions in Historical Perspective</h3>
+                        <p>Teaching Fellow to Professor James Feigenbaum, Fall 2022</p>
+                        <p><a href="#">Syllabus</a></p>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="student-feedback">
+                <h2>Student Feedback</h2>
+                <ul>
+                    <li>
+                        <p><i>"Add student quotes here"</i></p>
+                    </li>
+                    <li>
+                        <p><i>"Add another student quote here"</i></p>
+                    </li>
+                </ul>
+            </section>
+        </div>
     </div>
 
     <script>
         function toggleAbstract(id) {
             const abstract = document.getElementById(id);
             abstract.classList.toggle('show');
+        }
+
+        function showTab(tabName) {
+            // Hide all tabs
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            // Remove active state from all buttons
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            // Show selected tab
+            document.getElementById(tabName + '-tab').classList.add('active');
+
+            // Add active state to clicked button
+            event.target.classList.add('active');
         }
     </script>
 </body>
