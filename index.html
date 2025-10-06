@@ -115,6 +115,32 @@
         .abstract-content.show {
             display: block;
         }
+
+        /* Mobile responsive styles */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+                display: block;
+            }
+
+            .left-column {
+                position: static;
+                width: auto;
+                height: auto;
+                left: 0;
+                padding: 20px;
+            }
+
+            .right-column {
+                margin-left: 0;
+                padding: 20px;
+            }
+
+            .profile-pic {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
     </style>
 </head>
 <body>
