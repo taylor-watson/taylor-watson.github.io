@@ -129,10 +129,11 @@
             margin-right: 20px;
         }
 
+        /* Abstract button styling */
         .abstract-btn {
             background: none;
             border: none;
-            color: #228B22;
+            color: #228B22; /* same green */
             font-family: 'EB Garamond', serif;
             font-size: 16px;
             cursor: pointer;
@@ -141,10 +142,32 @@
             text-decoration: none;
             display: inline-flex;
             align-items: center;
+            transition: color 0.3s ease;
         }
 
         .abstract-btn:hover {
-            color: #1a6b1a;
+            color: #1a6b1a; /* darker green hover */
+        }
+
+        /* Rotating arrow styling */
+        .arrow {
+            display: inline-block;
+            margin-right: 6px;
+            transition: transform 0.3s ease, border-left-color 0.3s ease;
+            width: 0;
+            height: 0;
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+            border-left: 8px solid #228B22; /* green arrow */
+            vertical-align: middle;
+        }
+
+        .abstract-btn:hover .arrow {
+            border-left-color: #1a6b1a; /* match hover green */
+        }
+
+        .abstract-btn.active .arrow {
+            transform: rotate(90deg);
         }
 
         .abstract-content {
@@ -154,23 +177,6 @@
 
         .abstract-content.show {
             display: block;
-        }
-
-        /* Arrow styling */
-        .arrow {
-            display: inline-block;
-            margin-right: 6px;
-            transition: transform 0.3s ease;
-            width: 0;
-            height: 0;
-            border-top: 6px solid transparent;
-            border-bottom: 6px solid transparent;
-            border-left: 8px solid #1a6bdf; /* blue arrow */
-            vertical-align: middle;
-        }
-
-        .abstract-btn.active .arrow {
-            transform: rotate(90deg);
         }
 
         /* Mobile responsive styles */
@@ -227,6 +233,7 @@
             <button class="nav-btn" onclick="showTab('teaching')">Teaching</button>
         </div>
 
+        <!-- RESEARCH TAB -->
         <div id="research-tab" class="tab-content active">
             <section id="working-papers">
                 <h2>Working Papers</h2>
@@ -239,18 +246,11 @@
                                 <span class="arrow"></span> Abstract
                             </button>
                             <div id="abstract2" class="abstract-content">
-                                <p>Regulatory burdens are said to stifle economic activity — but what happens when regulations are enforced on noncompliant firms? I estimate how enforcement affects
-individual plants in the context of the US Occupational Safety & Health Administration, linking data on surprise inspections to restricted-use Census micro data. Using
-a matched-stacked event study design, I find that while high regulatory fines decrease
-employment and increase closure probability, low fines have the opposite effect. I interpret these results with a conceptual framework in which plants try to comply with
-those regulations they believe to be profitable, while a regulator uses fines to incentivize
-full compliance. I provide evidence consistent with this framework, showing that high
-fines are associated with higher private costs such as reputation damage and productivity losses, while low fines may result in profitable spillovers such as improvements in
-management. These findings show that enforcement effects are more complicated than
-critics allege, and may even improve performance.</p>
+                                <p>Regulatory burdens are said to stifle economic activity — but what happens when regulations are enforced on noncompliant firms? I estimate how enforcement affects individual plants in the context of the US Occupational Safety & Health Administration, linking data on surprise inspections to restricted-use Census micro data. Using a matched-stacked event study design, I find that while high regulatory fines decrease employment and increase closure probability, low fines have the opposite effect. I interpret these results with a conceptual framework in which plants try to comply with those regulations they believe to be profitable, while a regulator uses fines to incentivize full compliance. I provide evidence consistent with this framework, showing that high fines are associated with higher private costs such as reputation damage and productivity losses, while low fines may result in profitable spillovers such as improvements in management. These findings show that enforcement effects are more complicated than critics allege, and may even improve performance.</p>
                             </div>
                         </div>
                     </li>
+
                     <li class="paper-item">
                         <div class="paper-content">
                             <h3><a href="wage_theft_credits.pdf">"From Your Pocket to Your Boss's: Tax Credits & Wage Theft"</a></h3>
@@ -258,20 +258,10 @@ critics allege, and may even improve performance.</p>
                                 <span class="arrow"></span> Abstract
                             </button>
                             <div id="abstract1" class="abstract-content">
-                                <p>Wage theft is a pervasive issue for American workers, yet research on the subject is
-                                    stymied by underreporting: workers fear retaliatory firing if they report. This paper
-                                    investigates if reporting decisions are affected by work-contingent government transfers,
-                                    as they should make remaining employed more attractive, increasing the cost of
-                                    being fired. Using variation in state Earned Income Tax Credits over time, I find that
-                                    increases in transfers are associated with lower reporting counts, analyzing at the ZIP
-                                    code level. To confirm that this decrease truly reflects changes in reporting rather than
-                                    a decrease in wage theft itself, I estimate the relationship between transfers and several
-                                    intensive-margin outcomes of wage theft. Finding no evidence that transfers decrease
-                                    wage theft intensity, I conclude that transfers reduce reporting propensities.</p>
+                                <p>Wage theft is a pervasive issue for American workers, yet research on the subject is stymied by underreporting: workers fear retaliatory firing if they report. This paper investigates if reporting decisions are affected by work-contingent government transfers, as they should make remaining employed more attractive, increasing the cost of being fired. Using variation in state Earned Income Tax Credits over time, I find that increases in transfers are associated with lower reporting counts, analyzing at the ZIP code level. To confirm that this decrease truly reflects changes in reporting rather than a decrease in wage theft itself, I estimate the relationship between transfers and several intensive-margin outcomes of wage theft. Finding no evidence that transfers decrease wage theft intensity, I conclude that transfers reduce reporting propensities.</p>
                             </div>
                         </div>
                     </li>
-                    
                 </ul>
             </section>
             
@@ -303,15 +293,7 @@ critics allege, and may even improve performance.</p>
                                 <span class="arrow"></span> Abstract
                             </button>
                             <div id="abstract6" class="abstract-content">
-                                <p>The exacerbating fertility crisis has renewed interest in the drivers of fertility choice. 
-                                    I estimate the importance of an under-researched factor, social capital, using a distinct historical experiment: 
-                                    the spread of the Grange Movement in the late 19th Century. This group was dedicated to fostering strong communities
-                                    through education and social inclusion. I digitize archives of chapter formation and dissolution, and link them
-                                    to the full-count Censuses to produce a novel panel dataset of individuals and their hometown Grange status. I then exploit
-                                    the quasi-random nature of chapter formation, wherein organizers travelled between towns in plausibly-exogenous routes, to 
-                                    construct an instrument for Grange presence. I first show that Granges had a positive causal impact on social capital, using 
-                                    the formation of high schools as a proxy. I then estimate the effects of Grange exposure on fertility, finding strong positive effects.
-                                    Policymakers interested in raising fertility rates should consider policies which will increase social capital as an effective mechanism.</p>
+                                <p>The exacerbating fertility crisis has renewed interest in the drivers of fertility choice. I estimate the importance of an under-researched factor, social capital, using a distinct historical experiment: the spread of the Grange Movement in the late 19th Century. This group was dedicated to fostering strong communities through education and social inclusion. I digitize archives of chapter formation and dissolution, and link them to the full-count Censuses to produce a novel panel dataset of individuals and their hometown Grange status. I then exploit the quasi-random nature of chapter formation, wherein organizers travelled between towns in plausibly-exogenous routes, to construct an instrument for Grange presence. I first show that Granges had a positive causal impact on social capital, using the formation of high schools as a proxy. I then estimate the effects of Grange exposure on fertility, finding strong positive effects. Policymakers interested in raising fertility rates should consider policies which will increase social capital as an effective mechanism.</p>
                             </div>
                         </div>
                     </li>                
@@ -348,6 +330,7 @@ critics allege, and may even improve performance.</p>
             </section>
         </div>
 
+        <!-- TEACHING TAB -->
         <div id="teaching-tab" class="tab-content">
             <section id="teaching">
                 <ul>
@@ -355,19 +338,19 @@ critics allege, and may even improve performance.</p>
                         <h3>Harvard University, EC970: Economic History Mysteries</h3>
                         <p>Instructor-of-Record, Spring 2025 (Returning Spring 2026)</p>
                         <p><strong>Average Rating: </strong>4.9 / 5.0</p>
-                        <p><em>"One of my favorite, if not my favorite instructor at Harvard as of now. He is a great teacher since he only talks about the most important and relevant components of any subject or reading, but he also is a pretty considerate person, making time to read through drafts of assignments and being quite accessible at office hours. He's done a great job with the course this year and I only hope he returns next year so more students can learn as much as I did from him.</em></p>
+                        <p><em>"One of my favorite, if not my favorite instructor at Harvard as of now..."</em></p>
                     </li>
                     <li>
                         <h3>Boston University, EC204: Empirical Economics II</h3>
                         <p>Teaching Fellow to Professor Onur Burak Celik, Spring 2023</p>
                         <p><strong>Average Rating: </strong>4.9 / 5.0</p>
-                        <p><em>"Taylor was a great discussion instructor and his lessons were essential in my understanding of the course content. He was able to provide alternative explanations of topics to what was provided in class and I felt this improved my experience. He was also extremely willing and able to help my group with questions about our research paper and gave us a lot of supplementary ideas and feedback.</em></p>                        
+                        <p><em>"Taylor was a great discussion instructor..."</em></p>                        
                     </li>
                     <li>
                         <h3>Boston University, EC365: Economic Institutions in Historical Perspective</h3>
                         <p>Teaching Fellow to Professor James Feigenbaum, Fall 2022</p>
-                         <p><strong>Average Rating: </strong>4.6 / 5.0</p>
-                        <p><em>"Taylor is responsible and always willing to help. He actively invited me to have a Zoom meeting to discuss my research question with him, and explained my questions very patiently and clearly via email. The best TF I've met in BU.</em></p>                        
+                        <p><strong>Average Rating: </strong>4.6 / 5.0</p>
+                        <p><em>"Taylor is responsible and always willing to help..."</em></p>                        
                     </li>
                 </ul>
             </section>
