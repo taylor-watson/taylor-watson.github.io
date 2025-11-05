@@ -139,6 +139,8 @@
             padding: 0;
             margin-top: 6px;
             text-decoration: none;
+            display: inline-flex;
+            align-items: center;
         }
 
         .abstract-btn:hover {
@@ -152,6 +154,23 @@
 
         .abstract-content.show {
             display: block;
+        }
+
+        /* Arrow styling */
+        .arrow {
+            display: inline-block;
+            margin-right: 6px;
+            transition: transform 0.3s ease;
+            width: 0;
+            height: 0;
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+            border-left: 8px solid #1a6bdf; /* blue arrow */
+            vertical-align: middle;
+        }
+
+        .abstract-btn.active .arrow {
+            transform: rotate(90deg);
         }
 
         /* Mobile responsive styles */
@@ -216,7 +235,9 @@
                         <div class="paper-content">
                             <h3><a href="heterogeneous_enforcement.pdf">"Heterogeneous Effects of Regulatory Enforcement: Evidence from OSHA"</a></h3>
                             <p><i>Job Market Paper</i></p>
-                            <button class="abstract-btn" onclick="toggleAbstract('abstract2')">Abstract</button>
+                            <button class="abstract-btn" onclick="toggleAbstract('abstract2', this)">
+                                <span class="arrow"></span> Abstract
+                            </button>
                             <div id="abstract2" class="abstract-content">
                                 <p>Regulatory burdens are said to stifle economic activity — but what happens when regulations are enforced on noncompliant firms? I estimate how enforcement affects
 individual plants in the context of the US Occupational Safety & Health Administration, linking data on surprise inspections to restricted-use Census micro data. Using
@@ -233,7 +254,9 @@ critics allege, and may even improve performance.</p>
                     <li class="paper-item">
                         <div class="paper-content">
                             <h3><a href="wage_theft_credits.pdf">"From Your Pocket to Your Boss's: Tax Credits & Wage Theft"</a></h3>
-                            <button class="abstract-btn" onclick="toggleAbstract('abstract1')">Abstract</button>
+                            <button class="abstract-btn" onclick="toggleAbstract('abstract1', this)">
+                                <span class="arrow"></span> Abstract
+                            </button>
                             <div id="abstract1" class="abstract-content">
                                 <p>Wage theft is a pervasive issue for American workers, yet research on the subject is
                                     stymied by underreporting: workers fear retaliatory firing if they report. This paper
@@ -276,7 +299,9 @@ critics allege, and may even improve performance.</p>
                     <li class="paper-item">
                         <div class="paper-content">
                             <h3>"Home on the Grange: Social Capital & Fertility"</h3>
-                            <button class="abstract-btn" onclick="toggleAbstract('abstract6')">Abstract</button>
+                            <button class="abstract-btn" onclick="toggleAbstract('abstract6', this)">
+                                <span class="arrow"></span> Abstract
+                            </button>
                             <div id="abstract6" class="abstract-content">
                                 <p>The exacerbating fertility crisis has renewed interest in the drivers of fertility choice. 
                                     I estimate the importance of an under-researched factor, social capital, using a distinct historical experiment: 
@@ -328,7 +353,7 @@ critics allege, and may even improve performance.</p>
                 <ul>
                     <li>
                         <h3>Harvard University, EC970: Economic History Mysteries</h3>
-                        <p>Instructor-of-Record, Spring 2025</p>
+                        <p>Instructor-of-Record, Spring 2025 (Returning Spring 2026)</p>
                         <p><strong>Average Rating: </strong>4.9 / 5.0</p>
                         <p><em>"One of my favorite, if not my favorite instructor at Harvard as of now. He is a great teacher since he only talks about the most important and relevant components of any subject or reading, but he also is a pretty considerate person, making time to read through drafts of assignments and being quite accessible at office hours. He's done a great job with the course this year and I only hope he returns next year so more students can learn as much as I did from him.</em></p>
                     </li>
@@ -350,24 +375,18 @@ critics allege, and may even improve performance.</p>
     </div>
 
     <script>
-        function toggleAbstract(id) {
+        function toggleAbstract(id, btn) {
             const abstract = document.getElementById(id);
-            abstract.classList.toggle('show');
+            const isShown = abstract.classList.toggle('show');
+            btn.classList.toggle('active', isShown);
         }
 
         function showTab(tabName) {
-            // Hide all tabs
             const tabs = document.querySelectorAll('.tab-content');
             tabs.forEach(tab => tab.classList.remove('active'));
-
-            // Remove active state from all buttons
             const buttons = document.querySelectorAll('.nav-btn');
             buttons.forEach(btn => btn.classList.remove('active'));
-
-            // Show selected tab
             document.getElementById(tabName + '-tab').classList.add('active');
-
-            // Add active state to clicked button
             event.target.classList.add('active');
         }
     </script>
