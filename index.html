@@ -6,235 +6,32 @@
     <title>Taylor Watson - Economics</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
     <link rel="icon" href="graph.ico" type="image/x-icon">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'EB Garamond', serif;
-            display: flex;
-        }
-            
-        .left-column {
-            position: fixed;
-            top: 0;
-            left: 40px;
-            width: 400px;
-            height: 100vh; 
-            padding: 20px;
-        }
-                
-        .right-column {
-            margin-left: 500px;
-            padding: 20px;
-            padding-right: 60px;
-            max-width: 1200px;
-        }
-    
-        .profile-pic {
-            width: 300px;
-            height: auto;
-            border-radius: 6px;
-            display: block;
-            margin-bottom: 15px;
-        }
-
-        .nav-buttons {
-            margin-bottom: 30px;
-            padding-bottom: 10px;
-        }
-
-        .nav-btn {
-            background: none;
-            border: none;
-            font-family: 'EB Garamond', serif;
-            font-size: 24px;
-            cursor: pointer;
-            padding: 0;
-            margin-right: 30px;
-            color: rgba(0, 0, 0, 0.4);
-            transition: color 0.3s ease;
-        }
-
-        .nav-btn:hover {
-            color: rgba(0, 0, 0, 0.7);
-        }
-
-        .nav-btn.active {
-            color: rgba(0, 0, 0, 1);
-        }
-
-        .tab-content {
-            display: none;
-        }
-
-        .tab-content.active {
-            display: block;
-        }
-    
-        .right-column section {
-            border-top: 1px solid black;
-            padding-top: 20px;
-        }
-    
-        .right-column section:first-child {
-            border-top: none;
-        }
-    
-        h1, h2, h3 {
-            margin-top: 0.5em;
-            margin-bottom: 0.5em;
-        }
-    
-        ul {
-            padding-left: 20px;
-            list-style: none;
-        }
-
-        #teaching ul li {
-            border-bottom: 1px solid #999;
-            padding-bottom: 15px;
-            margin-bottom: 15px;
-        }
-        ul li {
-            margin-bottom: 10px;
-        }
-    
-        li h3 {
-            margin-bottom: 5px;
-        }
-    
-        li p {
-            margin-top: 5px;
-            margin-bottom: 5px;
-        }
-    
-        a {
-            color: #004080;
-            text-decoration: none;
-        }
-    
-        a:hover {
-            text-decoration: underline;
-        }
-    
-        .paper-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 20px;
-        }
-    
-        .paper-content {
-            flex-grow: 1;
-            margin-right: 20px;
-        }
-
-        /* Abstract button styling */
-        .abstract-btn {
-            background: none;
-            border: none;
-            color: #228B22; /* same green */
-            font-family: 'EB Garamond', serif;
-            font-size: 16px;
-            cursor: pointer;
-            padding: 0;
-            margin-top: 6px;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            transition: color 0.3s ease;
-        }
-
-        .abstract-btn:hover {
-            color: #1a6b1a; /* darker green hover */
-        }
-
-        /* Rotating arrow styling */
-        .arrow {
-            display: inline-block;
-            margin-right: 6px;
-            transition: transform 0.3s ease, border-left-color 0.3s ease;
-            width: 0;
-            height: 0;
-            border-top: 6px solid transparent;
-            border-bottom: 6px solid transparent;
-            border-left: 8px solid #228B22; /* green arrow */
-            vertical-align: middle;
-        }
-
-        .abstract-btn:hover .arrow {
-            border-left-color: #1a6b1a; /* match hover green */
-        }
-
-        .abstract-btn.active .arrow {
-            transform: rotate(90deg);
-        }
-
-        .abstract-content {
-            display: none;
-            margin-top: 10px;
-        }
-
-        .abstract-content.show {
-            display: block;
-        }
-
-        /* Mobile responsive styles */
-        @media (max-width: 768px) {
-            body {
-                flex-direction: column;
-                display: block;
-            }
-
-            .left-column {
-                position: static;
-                width: auto;
-                height: auto;
-                left: 0;
-                padding: 20px;
-            }
-
-            .right-column {
-                margin-left: 0;
-                padding: 20px;
-            }
-
-            .profile-pic {
-                width: 100%;
-                max-width: 300px;
-            }
-
-            .nav-btn {
-                font-size: 20px;
-                margin-right: 20px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="layout">
     <div class="left-column">
         <div class="personal-info">
-            <h1>Taylor Watson</h1>
-            <img src="profile.jpg" alt="Taylor Watson - Economics" class="profile-pic">
-            <p>
-                I'm a postdoctoral researcher at the Strategic Enforcement Lab and Shift Project at the Harvard Kennedy School of Government. I received my PhD in economics at 
-                <a href="https://www.bu.edu/econ/">Boston University</a> in 2026.<br>
+            <h1 class="site-title">Taylor Watson</h1>
+            <img src="profile.jpg" alt="Taylor Watson" class="profile-pic">
+            <p class="bio">
+                I'm a postdoctoral researcher at the Strategic Enforcement Lab and Shift Project at the Harvard Kennedy School of Government. I received my PhD in economics at <a href="https://www.bu.edu/econ/">Boston University</a> in 2026.<br>
                 My research interests include labor, health, and history.<br>
-                Please feel free to email me at 
-                <a href="mailto:watson@bu.edu">watson@bu.edu</a>
+                Please feel free to email me at <a href="mailto:watson@bu.edu">watson@bu.edu</a>
             </p>
-            <p><a href="cv_watson.pdf">CV</a></p>
-        </div>    
+            <p><a class="cv-link" href="cv_watson.pdf">CV</a></p>
+        </div>
     </div>
 
     <div class="right-column">
-        <div class="nav-buttons">
-            <button class="nav-btn active" onclick="showTab('research')">Research</button>
-            <button class="nav-btn" onclick="showTab('teaching')">Teaching</button>
+        <div class="nav-buttons" role="tablist" aria-label="Sections">
+            <button class="nav-btn active" role="tab" id="tab-research" data-tab="research" aria-controls="research-tab" aria-selected="true">Research</button>
+            <button class="nav-btn" role="tab" id="tab-teaching" data-tab="teaching" aria-controls="teaching-tab" aria-selected="false" tabindex="-1">Teaching</button>
         </div>
 
         <!-- RESEARCH TAB -->
-        <div id="research-tab" class="tab-content active">
+        <div id="research-tab" class="tab-content active" role="tabpanel" aria-labelledby="tab-research">
             <section id="working-papers">
                 <h2>Working Papers</h2>
                 <ul>
@@ -242,32 +39,20 @@
                         <div class="paper-content">
                             <h3><a href="heterogeneous_enforcement.pdf">"Heterogeneous Effects of Regulatory Enforcement: Evidence from OSHA"</a></h3>
                             <p><i>Job Market Paper</i></p>
-                            <button class="abstract-btn" onclick="toggleAbstract('abstract2', this)">
-                                <span class="arrow"></span> Abstract
+                            <button class="abstract-btn" data-abstract="abstract2" aria-expanded="false" aria-controls="abstract2">
+                                <span class="arrow" aria-hidden="true"></span> Abstract
                             </button>
                             <div id="abstract2" class="abstract-content">
-                                <p>Opponents of regulation argue it stifles economic activity — but what actually happens when governments enforce regulations on noncompliant firms? I estimate how
-enforcement affects individual plants in the context of the US Occupational Safety &
-Health Administration, linking data on surprise inspections to restricted-use Census
-micro data. Using a matched-stacked event study design, I find that while high regulatory fines decrease employment and increase closure probability, low fines have the
-opposite effect. I interpret these results with a conceptual framework in which plants
-try to comply with those regulations they believe to be profitable, while a regulator
-uses fines to incentivize compliance. The framework predicts that fines are lower when
-safety is more profitable, and higher when the social benefits exceed the private costs. I
-provide evidence consistent with this prediction, showing that high fines are associated
-with higher private costs such as reputation damage and productivity losses, while low
-fines may result in profitable spillovers such as improvements in management. These
-findings show that enforcement effects are not uniformly negative, and may in some
-cases improve plant performance.</p>
+                                <p>Opponents of regulation argue it stifles economic activity — but what actually happens when governments enforce regulations on noncompliant firms? I estimate how enforcement affects individual plants in the context of the US Occupational Safety &amp; Health Administration, linking data on surprise inspections to restricted-use Census micro data. Using a matched-stacked event study design, I find that while high regulatory fines decrease employment and increase closure probability, low fines have the opposite effect. I interpret these results with a conceptual framework in which plants try to comply with those regulations they believe to be profitable, while a regulator uses fines to incentivize compliance. The framework predicts that fines are lower when safety is more profitable, and higher when the social benefits exceed the private costs. I provide evidence consistent with this prediction, showing that high fines are associated with higher private costs such as reputation damage and productivity losses, while low fines may result in profitable spillovers such as improvements in management. These findings show that enforcement effects are not uniformly negative, and may in some cases improve plant performance.</p>
                             </div>
                         </div>
                     </li>
 
                     <li class="paper-item">
                         <div class="paper-content">
-                            <h3><a href="wage_theft_credits.pdf">"From Your Pocket to Your Boss's: Tax Credits & Wage Theft"</a></h3>
-                            <button class="abstract-btn" onclick="toggleAbstract('abstract1', this)">
-                                <span class="arrow"></span> Abstract
+                            <h3><a href="wage_theft_credits.pdf">"From Your Pocket to Your Boss's: Tax Credits &amp; Wage Theft"</a></h3>
+                            <button class="abstract-btn" data-abstract="abstract1" aria-expanded="false" aria-controls="abstract1">
+                                <span class="arrow" aria-hidden="true"></span> Abstract
                             </button>
                             <div id="abstract1" class="abstract-content">
                                 <p>Wage theft is a pervasive issue for American workers, yet research on the subject is stymied by underreporting: workers fear retaliatory firing if they report. This paper investigates if reporting decisions are affected by work-contingent government transfers, as they should make remaining employed more attractive, increasing the cost of being fired. Using variation in state Earned Income Tax Credits over time, I find that increases in transfers are associated with lower reporting counts, analyzing at the ZIP code level. To confirm that this decrease truly reflects changes in reporting rather than a decrease in wage theft itself, I estimate the relationship between transfers and several intensive-margin outcomes of wage theft. Finding no evidence that transfers decrease wage theft intensity, I conclude that transfers reduce reporting propensities.</p>
@@ -276,10 +61,10 @@ cases improve plant performance.</p>
                     </li>
                 </ul>
             </section>
-            
+
             <section id="worksprogress">
                 <h2>Works in Progress</h2>
-                <ul>                    
+                <ul>
                     <li class="paper-item">
                         <div class="paper-content">
                             <h3>"Push-Pull Instruments for Local Sectoral Employment Stocks"</h3>
@@ -288,7 +73,7 @@ cases improve plant performance.</p>
                     </li>
                     <li class="paper-item">
                         <div class="paper-content">
-                            <h3>"Safety & Management"</h3>
+                            <h3>"Safety &amp; Management"</h3>
                             <p><i>With Nick Bloom, Matt Johnson and David Levine</i></p>
                         </div>
                     </li>
@@ -300,15 +85,15 @@ cases improve plant performance.</p>
                     </li>
                     <li class="paper-item">
                         <div class="paper-content">
-                            <h3>"Home on the Grange: Social Capital & Fertility"</h3>
-                            <button class="abstract-btn" onclick="toggleAbstract('abstract6', this)">
-                                <span class="arrow"></span> Abstract
+                            <h3>"Home on the Grange: Social Capital &amp; Fertility"</h3>
+                            <button class="abstract-btn" data-abstract="abstract6" aria-expanded="false" aria-controls="abstract6">
+                                <span class="arrow" aria-hidden="true"></span> Abstract
                             </button>
                             <div id="abstract6" class="abstract-content">
                                 <p>The exacerbating fertility crisis has renewed interest in the drivers of fertility choice. I estimate the importance of an under-researched factor, social capital, using a distinct historical experiment: the spread of the Grange Movement in the late 19th Century. This group was dedicated to fostering strong communities through education and social inclusion. I digitize archives of chapter formation and dissolution, and link them to the full-count Censuses to produce a novel panel dataset of individuals and their hometown Grange status. I then exploit the quasi-random nature of chapter formation, wherein organizers travelled between towns in plausibly-exogenous routes, to construct an instrument for Grange presence. I first show that Granges had a positive causal impact on social capital, using the formation of high schools as a proxy. I then estimate the effects of Grange exposure on fertility, finding strong positive effects. Policymakers interested in raising fertility rates should consider policies which will increase social capital as an effective mechanism.</p>
                             </div>
                         </div>
-                    </li>                
+                    </li>
                 </ul>
             </section>
 
@@ -343,20 +128,20 @@ cases improve plant performance.</p>
         </div>
 
         <!-- TEACHING TAB -->
-        <div id="teaching-tab" class="tab-content">
+        <div id="teaching-tab" class="tab-content" role="tabpanel" aria-labelledby="tab-teaching" hidden>
             <section id="teaching">
                 <ul>
                     <li>
                         <h3>Harvard University, EC970: Economic History Mysteries</h3>
-                        <p>Instructor-of-Record, Spring 2025 & Spring 2026</p>
+                        <p>Instructor-of-Record, Spring 2025 &amp; Spring 2026</p>
                         <p><strong>Average Rating: </strong>4.9 / 5.0</p>
-                        <p><em>"One of my favorite, if not my favorite instructor at Harvard as of now. He is a great teacher since he only talks about the most important and relevant components of any subject or reading, but he also is a pretty considerate person, making time to read through drafts of assignments and being quite accessible at office hours. He's done a great job with the course this year and I only hope he returns next year so more students can learn as much as I did from him."</em></p>                    
+                        <p><em>"One of my favorite, if not my favorite instructor at Harvard as of now. He is a great teacher since he only talks about the most important and relevant components of any subject or reading, but he also is a pretty considerate person, making time to read through drafts of assignments and being quite accessible at office hours. He's done a great job with the course this year and I only hope he returns next year so more students can learn as much as I did from him."</em></p>
                     </li>
                     <li>
                         <h3>Boston University, EC204: Empirical Economics II</h3>
-                        <p>Teaching Fellow to Professor Onur Burak Celik, Spring 2023 & Spring 2026</p>
+                        <p>Teaching Fellow to Professor Onur Burak Celik, Spring 2023 &amp; Spring 2026</p>
                         <p><strong>Average Rating: </strong>4.9 / 5.0</p>
-                        <p><em>"Taylor was a great discussion instructor and his lessons were essential in my understanding of the course content. He was able to provide alternative explanations of topics to what was provided in class and I felt this improved my experience. He was also extremely willing and able to help my group with questions about our research paper and gave us a lot of supplementary ideas and feedback."</em></p>                    
+                        <p><em>"Taylor was a great discussion instructor and his lessons were essential in my understanding of the course content. He was able to provide alternative explanations of topics to what was provided in class and I felt this improved my experience. He was also extremely willing and able to help my group with questions about our research paper and gave us a lot of supplementary ideas and feedback."</em></p>
                     </li>
                     <li>
                         <h3>Boston University, EC365: Economic Institutions in Historical Perspective</h3>
@@ -369,21 +154,6 @@ cases improve plant performance.</p>
         </div>
     </div>
 
-    <script>
-        function toggleAbstract(id, btn) {
-            const abstract = document.getElementById(id);
-            const isShown = abstract.classList.toggle('show');
-            btn.classList.toggle('active', isShown);
-        }
-
-        function showTab(tabName) {
-            const tabs = document.querySelectorAll('.tab-content');
-            tabs.forEach(tab => tab.classList.remove('active'));
-            const buttons = document.querySelectorAll('.nav-btn');
-            buttons.forEach(btn => btn.classList.remove('active'));
-            document.getElementById(tabName + '-tab').classList.add('active');
-            event.target.classList.add('active');
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
